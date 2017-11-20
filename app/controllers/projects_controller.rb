@@ -11,16 +11,20 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = project.new
+    @project = Project.new
   end
 
   def create
     @project = Project.new(project_params)
-     if @project.save
-      redirect_to project_path(@project)
-    else
-      render :new
-    end
+      respond_to do |format|
+        if @project.save
+          format.html {redirect_to projects_path}
+          format.js
+        else
+          format.html {render 'projects'}
+          format.js
+        end
+      end
   end
 
   def edit
@@ -42,7 +46,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :photo)
+    params.require(:project).permit(:title, :description)
   end
 
 end

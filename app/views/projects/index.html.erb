@@ -1,4 +1,14 @@
-<% @projects.each do |project| %>
-<%= project.name %>
-<%= project.description %>
-<% end %>
+<div class="container">
+  <div class="row" id="projects-row">
+    <% @projects.each do |project| %>
+      <%= render project %>
+    <% end %>
+  </div>
+</div>
+
+
+<div>
+  <% if user_signed_in? %>
+    <%= link_to 'add new project', new_project_path, id: "new-project-button", remote: true %>
+  <% end %>
+</div>

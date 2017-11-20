@@ -1,0 +1,7 @@
+<div id="project-form">
+  <%= simple_form_for @project, remote: true do |f| %>
+    <%= f.input :name  %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+</div>
