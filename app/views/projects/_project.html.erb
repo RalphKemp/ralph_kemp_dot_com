@@ -2,8 +2,9 @@
   <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url();">
     <div class="card-title">
       <h1><%= project.name %></h1>
-      <h3><%= project.description %></h3>
     </div>
-    <a class="card-link" href="#" ></a>
+    <%= link_to "#", project_path(project), class: "card-link" %>
   </div>
 </div>
+
+
