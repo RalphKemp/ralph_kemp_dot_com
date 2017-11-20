@@ -1,4 +1,7 @@
 <% @projects.each do |project| %>
-<%= project.name %>
-<%= project.description %>
+  <div class="container">
+    <div class="row">
+      <%= render project %>
+    </div>
+  </div>
 <% end %>
