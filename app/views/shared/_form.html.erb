@@ -1,5 +1,5 @@
 <div id="project-form">
-  <%= simple_form_for @project, remote: true do |f| %>
+  <%= simple_form_for @project, remote: true, :authenticity_token => true do |f| %>
     <%= f.input :title  %>
     <%= f.input :description %>
     <%= f.input :photo %>
