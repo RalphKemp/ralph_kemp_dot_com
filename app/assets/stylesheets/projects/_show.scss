@@ -1,0 +1,21 @@
+.project-title {
+  text-align: center;
+  font-family: $headers-font;
+  padding: 10px;
+}
+
+.project-description {
+  padding: 10px;
+  margin: 10px;
+  & > p {
+    font-size: 12px;
+  }
+}
+
+.show-card {
+  height: 400px;
+  background-size: contain !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
+}

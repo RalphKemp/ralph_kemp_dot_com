@@ -16,11 +16,15 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+      respond_to do |format|
       if @project.save
-        redirect_to projects_path
+        format.html {redirect_to projects_path}
+        format.js
       else
-        render :new
+        format.html{render :new}
+        format.js
       end
+    end
   end
 
   def edit

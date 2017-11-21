@@ -3,17 +3,32 @@
     <% @projects.each do |project| %>
       <%= render project %>
     <% end %>
-    <div class="col-xs-12 col-sm-4" id="new-project-button-div">
-      <% if user_signed_in? %>
-        <div class="card-2">
-          <%= link_to 'add new project', new_project_path, id: "new-project-button" %>
-        </div>
-      <% end %>
-    </div>
   </div>
 </div>
 
 
+<div class="form-container">
+  <div class="col-xs-12 col-sm-4" id="new-project-button-div">
+    <% if user_signed_in? %>
+      <div class="card-2">
+        <%= link_to 'add new project', new_project_path, id: "new-project-button", remote: true %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
-
+<% content_for(:after_js) do %>
+<!-- Initialize Swiper -->
+  <%= javascript_tag do %>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+  <% end %>
+<% end %>
