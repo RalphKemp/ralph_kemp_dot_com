@@ -1,11 +1,14 @@
 .card {
-  height: 175px;
+  height: 130px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
-  margin: 15px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-2 {
@@ -17,15 +20,9 @@
   margin: 15px;
 }
 
-.card-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .card-title h2 {
   font-size: 24px;
+  margin: 0px !important;
 }
 
 .card-link {
