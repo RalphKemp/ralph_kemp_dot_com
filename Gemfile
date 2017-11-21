@@ -9,7 +9,11 @@ gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
 gem 'carrierwave', '~> 1.2'
+gem 'attachinary', github: 'assembler/attachinary'
+gem "jquery-fileupload-rails"
+gem "coffee-rails"
 gem 'cloudinary'
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'

@@ -1,3 +1,3 @@
 class Project < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
+  has_attachments :photos, maximum: 10
 end
