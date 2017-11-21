@@ -9,11 +9,11 @@
           <div class="show-card" style="background-image: url('<%= cl_image_path photo.path %>')"></div>
         </div>
       <% end %>
-      <% @project.videos.each do |video| %>
         <div class="swiper-slide individual-slide">
-          <div class="show-card" style="background-image: url('<%= cl_video_path video.path %>')"></div>
+          <div class="show-card">
+
+          </div>
         </div>
-      <% end %>
     </div>
     <div class="swiper-pagination swiper-all-cards"></div>
   </div>
