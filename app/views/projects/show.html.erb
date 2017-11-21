@@ -1,3 +1,42 @@
-<% @project.photos.each do |photo| %>
-<%= cl_image_tag photo.path %>
+<div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+  <div class="">
+     <%= @project.title %>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <% @project.photos.each do |photo| %>
+        <div class="swiper-slide individual-slide">
+          <div class="card" style="background-image: url('<%= cl_image_path photo.path %>')"></div>
+        </div>
+      <% end %>
+    </div>
+    <div class="swiper-pagination swiper-all-cards"></div>
+  </div>
+  <% if (@project.photos != []) || (@project.photos.count == 1) %>
+  <!-- Add Pagination -->
+  <!-- Add Arrows -->
+  <!-- <div class="swiper-button-next swiper-button-white"></div>
+  <div class="swiper-button-prev swiper-button-white"></div> -->
+  <% end %>
+
+  <div class="album-desc-container">
+    <div class="show-album-description">
+      <%= @project.description.gsub(/\n/, '<br />') %>
+    </div>
+  </div>
+</div>
+
+
+<% content_for(:after_js) do %>
+    <%= javascript_tag do %>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+  <% end %>
 <% end %>
