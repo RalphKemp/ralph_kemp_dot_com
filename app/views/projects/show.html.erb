@@ -9,6 +9,13 @@
           <div class="show-card" style="background-image: url('<%= cl_image_path photo.path %>')"></div>
         </div>
       <% end %>
+        <div class="swiper-slide individual-slide">
+          <div class="show-card">
+            <%= cl_video_tag(@project.video, :crop => :crop,
+  :loop => true, :autoplay => true, :poster => false,
+  :fallback_content => "Your browser does not support HTML5 video tags" ) %>
+          </div>
+        </div>
     </div>
     <div class="swiper-pagination swiper-all-cards"></div>
   </div>
