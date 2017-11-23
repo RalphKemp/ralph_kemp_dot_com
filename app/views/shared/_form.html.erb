@@ -1,7 +1,7 @@
 <div id="project-form">
   <%= simple_form_for @project, remote: true, :authenticity_token => true do |f| %>
     <%= f.input :title  %>
-    <%= f.input :description %>
+    <%= f.text_area :description%>
     <%= f.input :photos, as: :attachinary %>
     <%= f.input :video, as: :attachinary %>
     <%= f.submit %>
