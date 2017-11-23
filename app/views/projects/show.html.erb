@@ -10,10 +10,8 @@
         </div>
       <% end %>
         <div class="swiper-slide individual-slide">
-          <div class="show-card">
-            <%= cl_video_tag(@project.video, :crop => :crop,
-  :loop => true, :autoplay => true, :poster => false,
-  :fallback_content => "Your browser does not support HTML5 video tags" ) %>
+          <div class="show-card video-card">
+            <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.3, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
           </div>
         </div>
     </div>

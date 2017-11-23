@@ -5,7 +5,7 @@
 }
 
 .project-description {
-  padding: 10px;
+  padding: 15px;
   margin: 10px;
   & > p {
     font-size: 12px;
@@ -18,4 +18,8 @@
   background-position: center;
   background-repeat: no-repeat;
   margin: 20px;
+}
+
+.video-card {
+  text-align: center;
 }
