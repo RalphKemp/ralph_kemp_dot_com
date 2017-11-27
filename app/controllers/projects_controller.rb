@@ -33,8 +33,9 @@ class ProjectsController < ApplicationController
 
   def update
     project_to_update = Project.find(params[:id])
-    project_to_update.update(project_params)
-    redirect_to project_to_update
+    if project_to_update.update(project_params)
+      redirect_to project_to_update
+    end
   end
 
   def destroy
