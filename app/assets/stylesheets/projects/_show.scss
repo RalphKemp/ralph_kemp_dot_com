@@ -27,6 +27,17 @@
 .profile-gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-desc-container, .show-project-name {
+  display: flex;
+  justify-content: center;
+}
+
+.show-project-name {
+  color: #fff;
 }
 
 .profile-gallery-img {
@@ -35,6 +46,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 20px;
 }
 
 
