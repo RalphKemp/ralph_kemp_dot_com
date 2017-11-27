@@ -3,12 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  padding: 0px 50px;
+  height: 30px;
   color: rgba(0,0,0,0.3);
-  position: absolute;
-  bottom: 0px;
   width: 100%;
+  position:fixed;    /*Here's what sticks it*/
+  bottom:0;          /*to the bottom of the window*/
+  left:0;
 }
 
 .footer-text p {
