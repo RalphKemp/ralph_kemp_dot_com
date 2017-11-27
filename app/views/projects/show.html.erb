@@ -40,17 +40,23 @@
   <div class="show-project-name">
     <h3><%= @project.title%></h3>
   </div>
-  <div class="profile-gallery">
-    <% @project.photos.each_with_index do |photo, n| %>
-      <a href="<%= cl_image_path photo.path %>" data-lightbox="image-profile" data-title="My caption">
-        <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path photo.path %>);">
-        </div>
-      </a>
-    <% end %>
-  </div>
-  <div class="project-desc-container">
-    <div class="show-project-description">
-      <%= @project.description %>
+  <div class="show-flex">
+    <div class="profile-gallery">
+      <% @project.photos.each_with_index do |photo, n| %>
+        <a href="<%= cl_image_path photo.path %>" data-lightbox="image-profile" data-title="My caption">
+          <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path photo.path %>);">
+          </div>
+        </a>
+      <% end %>
+        <a href="<%=   %>" data-lightbox="image-profile" data-title="My caption">
+          <div class="profile-gallery-img" style="background-image: url(<%=  %>);">
+          </div>
+        </a>
+    </div>
+    <div class="project-desc-container">
+      <div class="show-project-description">
+        <%= @project.description %>
+      </div>
     </div>
   </div>
 </div>
