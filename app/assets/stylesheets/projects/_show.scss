@@ -5,7 +5,7 @@
 }
 
 .project-description {
-  padding: 15px;
+  padding: 35px;
   margin-top: 15px;
   margin-bottom: 30px;
   & > p {
@@ -28,16 +28,23 @@
 .profile-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   flex-directon: row;
   margin-top: 100px;
-  padding: 30px;
+  padding: 5px;
 }
 
 .project-desc-container, .show-project-name {
   display: flex;
   justify-content: center;
+}
+
+.project-desc-container {
+  background-color: #fff;
+  box-shadow: 3px 3px 6px -1px rgba(186,177,186,1);
+  padding: 20px;
+  margin-right: 20px;
 }
 
 .show-project-name {
@@ -51,7 +58,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
-  margin: 20px;
+  margin: 10px;
 }
 
 .pagination-show {
@@ -60,7 +67,7 @@
 
 .show-flex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
