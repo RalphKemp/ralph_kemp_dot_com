@@ -15,6 +15,7 @@ gem "coffee-rails"
 gem 'cloudinary'
 
 
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -22,6 +23,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'lightbox2-rails'
 
 group :development, :test do
   gem 'pry-byebug'
