@@ -23,3 +23,16 @@
 .video-card {
   text-align: center;
 }
+
+
+@media(min-width: 660px) {
+  .project-description p {
+    margin: 25px;
+  }
+}
+
+@media(min-width: 840px) {
+  .project-description p {
+    margin: 35px;
+  }
+}

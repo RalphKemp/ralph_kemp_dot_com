@@ -9,11 +9,13 @@
           <div class="show-card" style="background-image: url('<%= cl_image_path photo.path %>')"></div>
         </div>
       <% end %>
+         <% if @project.video %>
         <div class="swiper-slide individual-slide">
           <div class="show-card video-card">
             <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.3, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
           </div>
         </div>
+        <% end %>
     </div>
     <div class="swiper-pagination swiper-all-cards"></div>
   </div>
@@ -29,8 +31,14 @@
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
+  <div>
+    <% if user_signed_in? %>
+      <div>
+        <%= link_to "Remove project", project_path(@project), data: { confirm: "Are you sure?" }, method: :delete %>
+      </div>
+    <% end %>
+  </div>
 </div>
-
 
 <% content_for(:after_js) do %>
     <%= javascript_tag do %>

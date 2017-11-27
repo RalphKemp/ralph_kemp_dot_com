@@ -1,1 +1,8 @@
-// Specific CSS for your home-page
+
+.home-image {
+  height: calc(100vh - 140px);
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
