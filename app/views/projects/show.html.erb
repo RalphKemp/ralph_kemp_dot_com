@@ -12,7 +12,7 @@
          <% if @project.video %>
         <div class="swiper-slide individual-slide">
           <div class="show-card video-card">
-            <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.3, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
+            <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.25, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
           </div>
         </div>
         <% end %>
@@ -21,7 +21,7 @@
   </div>
   <% if (@project.photos != []) || (@project.photos.count == 1) %>
   <!-- Add Pagination -->
-  <!-- Add Arrows -->
+
   <!-- <div class="swiper-button-next swiper-button-white"></div>
   <div class="swiper-button-prev swiper-button-white"></div> -->
   <% end %>
@@ -31,10 +31,43 @@
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
-  <div>
-    <% if user_signed_in? %>
-      <div>
-        <%= link_to "Remove project", project_path(@project), data: { confirm: "Are you sure?" }, method: :delete %>
+</div>
+
+<!--   desktop -->
+
+<div class="hidden-sm hidden-xs">
+  <!-- TODO lightbox2 gallery -->
+  <div class="show-project-name">
+    <h3><%= @project.title%></h3>
+  </div>
+  <div class="over-all-desktop">
+    <div class="show-flex">
+      <div class="profile-gallery flex-one">
+        <% @project.photos.each_with_index do |photo, n| %>
+          <a href="<%= cl_image_path photo.path %>" data-lightbox="image-profile" data-title="My caption">
+            <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path photo.path %>);">
+            </div>
+          </a>
+        <% end %>
+        <% if @project.video %>
+          <div class="desktop-video">
+            <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.2, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
+          </div>
+        <% end  %>
+      </div>
+      <div class="project-desc-container flex-two">
+        <div class="show-project-description">
+          <%= @project.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to "Remove project", project_path(@project), data: { confirm: "Are you sure?" }, method: :delete %>
       </div>
     <% end %>
   </div>
@@ -46,7 +79,7 @@
         pagination: '.swiper-pagination',
         slidesPerView: 1,
         paginationClickable: true,
-        spaceBetween: 30,
+        spaceBetween: 60,
         keyboardControl: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
