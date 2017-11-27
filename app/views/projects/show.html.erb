@@ -31,8 +31,14 @@
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
+  <div>
+    <% if user_signed_in? %>
+      <div>
+        <%= link_to "Remove project", project_path(@project), data: { confirm: "Are you sure?" }, method: :delete %>
+      </div>
+    <% end %>
+  </div>
 </div>
-
 
 <% content_for(:after_js) do %>
     <%= javascript_tag do %>
