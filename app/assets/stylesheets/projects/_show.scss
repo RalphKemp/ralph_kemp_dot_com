@@ -35,6 +35,11 @@
   // flex-directon: row;
 }
 
+.remove-project {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .show-project-name {
   text-align: center;
 }
@@ -71,7 +76,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 35% 35%;
   height: calc(100vh - 160px);
-  grid-row-gap: 30px;
+  grid-row-gap: 20px;
   padding: 20px;
   margin-bottom: 40px;
 }
@@ -91,7 +96,7 @@
 }
 
 .grid-photos {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 1;
   grid-column: 2 / span 2;
 }
 
@@ -109,7 +114,17 @@
   }
 }
 
+@media(max-width: 1280px) {
+  .desktop-grid {
+    grid-row-gap: 60px;
+  }
+}
 
+@media(max-height: 840px) {
+  .desktop-grid {
+    grid-row-gap: 60px;
+  }
+}
 
 
 
