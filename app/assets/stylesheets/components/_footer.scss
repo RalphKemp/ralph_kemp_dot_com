@@ -1,5 +1,5 @@
 .footer {
-  background-color: #fff;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 }
 
 .footer-text p {
-  color: #d8abab;
+  color: white;
   text-decoration: none;
   font-size: 12px;
   margin: 0px !important;
