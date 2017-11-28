@@ -36,26 +36,27 @@
 <!--   desktop -->
 
 <div class="hidden-sm hidden-xs">
-  <!-- TODO lightbox2 gallery -->
   <div class="show-project-name">
     <h3><%= @project.title%></h3>
   </div>
-  <div class="over-all-desktop">
-    <div class="show-flex">
-      <div class="profile-gallery flex-one">
+  <div class="container text-center">
+    <div class="desktop-grid">
+      <div class="profile-gallery grid-photos">
         <% @project.photos.each_with_index do |photo, n| %>
           <a href="<%= cl_image_path photo.path %>" data-lightbox="image-profile" data-title="My caption">
             <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path photo.path %>);">
             </div>
           </a>
         <% end %>
-        <% if @project.video %>
-          <div class="desktop-video">
-            <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.2, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
-          </div>
-        <% end  %>
       </div>
-      <div class="project-desc-container flex-two">
+
+      <% if @project.video %>
+        <div class="desktop-video grid-video">
+          <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.3, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
+        </div>
+      <% end  %>
+
+      <div class="project-desc-container grid-description">
         <div class="show-project-description">
           <%= @project.description %>
         </div>
