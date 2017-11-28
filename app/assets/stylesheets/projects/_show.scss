@@ -71,6 +71,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 35% 35%;
   height: calc(100vh - 160px);
+  grid-row-gap: 30px;
   padding: 20px;
 }
 
