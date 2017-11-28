@@ -18,18 +18,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+
 }
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
   font-size: 14px;
+  color: #D7DDE8;
   // display: none;
 }
 .navbar-wagon-link:hover {
@@ -58,6 +60,6 @@
 
 .ralph-kemp-logo {
   margin-bottom: 10px;
-  color: #636FA4;
+  color: #D7DDE8;
 }
 
