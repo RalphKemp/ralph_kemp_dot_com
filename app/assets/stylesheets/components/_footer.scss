@@ -1,6 +1,6 @@
 .footer {
   background: transparent;
-  text-align: right;
+  text-align: left;
   height: 30px;
   color: rgba(0,0,0,0.3);
   width: 100%;
@@ -11,10 +11,10 @@
 }
 
 .footer-text p {
-  color: white;
+  color: #808080;
   text-decoration: none;
   font-size: 12px;
-  margin-right: 50px;
+  margin-left: 50px;
 }
 
 @media(min-width: 1280px) {
