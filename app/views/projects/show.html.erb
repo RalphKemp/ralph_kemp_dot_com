@@ -49,7 +49,7 @@
       <% end %>
       <% if @project.video %>
         <a href="<%= cl_video_path @project.video.path %>.gif" data-lightbox="image-profile" data-title="My caption">
-          <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path @project.photos.first.path %>);">
+          <div class="profile-gallery-img" style="background-image: url(<%= cl_video_path @project.video.path %>.jpg);">
           </div>
         </a>
       <% end %>
