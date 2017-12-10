@@ -23,3 +23,14 @@
     height: 40px;
   }
 }
+
+@media(max-width: 400px) {
+  .footer {
+    bottom: -80px;
+    justify-content: center;
+  }
+
+  .footer-text p {
+    margin-left: 0px;
+  }
+}
