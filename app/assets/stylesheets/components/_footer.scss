@@ -1,24 +1,36 @@
 .footer {
   background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   text-align: left;
   height: 30px;
   color: rgba(0,0,0,0.3);
   width: 100%;
-  position:fixed;    /*Here's what sticks it*/
-  bottom:0;          /*to the bottom of the window*/
-  left:0;
-  margin-top: 40px;
+  position: absolute;
+  bottom: 5px;
 }
 
 .footer-text p {
   color: #808080;
   text-decoration: none;
   font-size: 12px;
-  margin-left: 50px;
+  padding-left: 30px;
 }
 
 @media(min-width: 1280px) {
   .footer {
     height: 40px;
+  }
+}
+
+@media(max-width: 400px) {
+  .footer {
+    bottom: -80px;
+    justify-content: center;
+  }
+
+  .footer-text p {
+    padding-left: 0px;
   }
 }

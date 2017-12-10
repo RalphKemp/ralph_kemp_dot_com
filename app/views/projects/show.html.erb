@@ -1,3 +1,5 @@
+<!-- mobile -->
+
 <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
   <div class="project-title">
      <%= @project.title %>
@@ -9,25 +11,18 @@
           <div class="show-card" style="background-image: url('<%= cl_image_path photo.path %>')"></div>
         </div>
       <% end %>
-         <% if @project.video %>
+      <% if @project.video %>
         <div class="swiper-slide individual-slide">
-          <div class="show-card video-card">
-            <%= cl_video_tag(@project.video.path, :loop => true, :autoplay => true, :poster => false, :width=>0.22, :crop=> "scale", :fallback_content => "Your browser does not support HTML5 video tags" ) %>
-          </div>
+          <div class="show-card" style="background-image: url('<%= cl_video_path @project.video.path %>.gif')"></div>
         </div>
-        <% end %>
+      <% end %>
     </div>
     <div class="swiper-pagination swiper-all-cards"></div>
   </div>
   <% if (@project.photos != []) || (@project.photos.count == 1) %>
-  <!-- Add Pagination -->
-
-  <!-- <div class="swiper-button-next swiper-button-white"></div>
-  <div class="swiper-button-prev swiper-button-white"></div> -->
   <% end %>
-
   <div class="album-desc-container">
-    <div class="project-description">
+    <div class="mobile-project-description">
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
@@ -49,7 +44,7 @@
       <% end %>
       <% if @project.video %>
         <a href="<%= cl_video_path @project.video.path %>.gif" data-lightbox="image-profile" data-title="My caption">
-          <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path @project.photos.first.path %>);">
+          <div class="profile-gallery-img" style="background-image: url(<%= cl_video_path @project.video.path %>.jpg);">
           </div>
         </a>
       <% end %>
