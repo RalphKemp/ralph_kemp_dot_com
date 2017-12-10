@@ -6,7 +6,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
 }
 
@@ -26,6 +26,7 @@
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+  color: #D7DDE8;
 
 }
 
@@ -63,5 +64,11 @@
   margin-bottom: 10px;
   margin-right: 10px;
   color: #D7DDE8;
+}
+
+@media(max-width: 991px) {
+  .navbar-wagon {
+    justify-content: space-between;
+  }
 }
 

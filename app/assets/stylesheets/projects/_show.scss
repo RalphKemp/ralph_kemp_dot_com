@@ -5,8 +5,16 @@
   margin-top: 20px;
 }
 
+.album-desc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .mobile-project-description {
+  width: 80%;
   padding: 20px;
+  color: white;
   margin-top: 15px, 10px, 30px, 10px;
   & > p {
     font-size: 12px;
@@ -32,11 +40,9 @@
 
 .profile-gallery {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
-
-  // flex-directon: row;
+  margin-bottom: 30px;
 }
 
 .remove-project {
@@ -46,13 +52,6 @@
 
 .show-project-name {
   text-align: center;
-}
-
-.show-project-description {
-  font-size: 13px;
-}
-
-.show-project-name {
   color: #fff;
 }
 
@@ -67,28 +66,27 @@
 }
 
 .project-desc-container {
-  text-align: left;
-  padding-left: 10px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-project-description {
+  font-size: 13px;
+  color: white;
+  width: 500px;
 }
 
 .pagination-show {
   margin-top: 10px;
 }
 
-
-
-
-// @media(min-width: 660px) {
-//   .project-description p {
-//     margin: 25px;
-//   }
-// }
-
-// @media(min-width: 840px) {
-//   .project-description p {
-//     margin: 35px;
-//   }
-// }
+@media(min-width: 750px) {
+  .mobile-project-description {
+    width: 60%;
+  }
+}
 
 
 
