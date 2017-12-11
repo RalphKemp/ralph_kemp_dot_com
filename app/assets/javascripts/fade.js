@@ -4,3 +4,8 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $(".b-card").each(function(i) {
+    $(this).delay(200 * i).fadeIn(900);
+  });
+});
