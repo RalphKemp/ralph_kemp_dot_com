@@ -22,7 +22,7 @@
   <% if (@project.photos != []) || (@project.photos.count == 1) %>
   <% end %>
   <div class="album-desc-container">
-    <div class="mobile-project-description">
+    <div class="mobile-project-description m-card">
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
