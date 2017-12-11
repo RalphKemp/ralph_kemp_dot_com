@@ -1,6 +1,6 @@
 .two-cards {
   display: flex;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -19,6 +19,17 @@
   background-color: #fff;
   box-shadow: 3px 3px 6px -1px rgba(186,177,186,1);
   max-width: 400px;
-  margin: 20px 0px 10px 30px;
+  margin: 20px 5px 10px 5px;
   border-radius: 10px;
+}
+
+
+@media(min-width: 922px) {
+  .two-cards {
+    align-items: left;
+  }
+
+  .a-card {
+    margin: 20px 0px 10px 30px;
+  }
 }

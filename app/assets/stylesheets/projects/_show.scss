@@ -43,6 +43,7 @@
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .remove-project {
@@ -52,17 +53,20 @@
 
 .show-project-name {
   text-align: center;
-  color: #fff;
+  color: #a3a3a3;
+  font-size: 18px;
+  margin-bottom: none;
 }
 
 .profile-gallery-img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
   margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 .project-desc-container {
@@ -88,7 +92,12 @@
   }
 }
 
-
+@media(max-width: 1039px) {
+  .profile-gallery-img {
+    width: 230px;
+    height: 230px;
+  }
+}
 
 
 
