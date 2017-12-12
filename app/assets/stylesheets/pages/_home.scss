@@ -20,7 +20,7 @@ body {
 }
 
 .about-card {
- padding: 20px;
+ padding: 18px;
  font-size: 14px;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 
-@media(min-width: 922px) {
+@media(min-width: 600px) {
   .two-cards {
     align-items: left;
   }
