@@ -4,6 +4,8 @@ html {
 body {
   position: relative;
   background: linear-gradient(#f5efef, #f7ad7b);
+  // background-image: image-url("beans2.jpg"), linear-gradient(#f5efef, #f7ad7b);
+  background-size: cover;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -14,10 +16,11 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 70px;
 }
 
 .about-card {
- padding: 20px;
+ padding: 18px;
  font-size: 14px;
 }
 
@@ -35,14 +38,64 @@ body {
   border-radius: 10px;
 }
 
+// slides
 
-@media(min-width: 922px) {
+.slide-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  .oneone {
+    background-image: url('beans.jpg');
+    background-size: cover !important;
+  }
+
+  .twotwo {
+    background-image: url('beans2.jpg');
+    background-size: cover !important;
+  }
+
+  .slide {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    &.showw {
+        opacity: 1;
+    }
+  }
+}
+
+.testing {
+  height: 200px;
+  width: 200px;
+}
+
+
+@media(min-width: 600px) {
   .two-cards {
     align-items: left;
   }
 
   .a-card {
     margin: 20px 0px 10px 30px;
+  }
+}
+
+@media(max-width: 922px) {
+  .slides-to-hide {
+    display: none;
   }
 }
 
