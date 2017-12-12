@@ -16,6 +16,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 70px;
 }
 
 .about-card {
@@ -37,20 +38,25 @@ body {
   border-radius: 10px;
 }
 
-
 // slides
 
 .slide-container {
   width: 100%;
-  height: calc(100vh - 70px);
-  position: relative;
-
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
   .oneone {
     background-image: url('beans.jpg');
+    background-size: cover !important;
   }
 
   .twotwo {
     background-image: url('beans2.jpg');
+    background-size: cover !important;
   }
 
   .slide {
@@ -61,13 +67,10 @@ body {
     left: 0;
     height: 100%;
     transition: opacity 1s ease-in-out;
-
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-
     opacity: 0;
-
     &.showw {
         opacity: 1;
     }
@@ -87,6 +90,10 @@ body {
 
   .a-card {
     margin: 20px 0px 10px 30px;
+  }
+
+  .slide-container {
+    display: none;
   }
 }
 
