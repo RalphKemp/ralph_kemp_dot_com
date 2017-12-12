@@ -4,6 +4,8 @@ html {
 body {
   position: relative;
   background: linear-gradient(#f5efef, #f7ad7b);
+  // background-image: image-url("beans2.jpg"), linear-gradient(#f5efef, #f7ad7b);
+  background-size: cover;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -33,6 +35,48 @@ body {
   max-width: 400px;
   margin: 20px 5px 10px 5px;
   border-radius: 10px;
+}
+
+
+// slides
+
+.slide-container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: relative;
+
+  .oneone {
+    background-image: url('beans.jpg');
+  }
+
+  .twotwo {
+    background-image: url('beans2.jpg');
+  }
+
+  .slide {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    opacity: 0;
+
+    &.showw {
+        opacity: 1;
+    }
+  }
+}
+
+.testing {
+  height: 200px;
+  width: 200px;
 }
 
 
