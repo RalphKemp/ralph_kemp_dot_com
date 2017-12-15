@@ -35,4 +35,13 @@
   }
 }
 
+@media(max-width: 320px) {
+  .footer {
+    bottom: -150px;
+    justify-content: center;
+  }
 
+  .footer-text p {
+    padding-right: 0px;
+  }
+}
