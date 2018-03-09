@@ -16,7 +16,11 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // margin-top: 70px;
+  height: calc(100% - 70px);
+}
+
+.logo-container {
+  display: none;
 }
 
 .about-card {
@@ -38,49 +42,6 @@ body {
   border-radius: 10px;
 }
 
-// slides
-
-.slide-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  .oneone {
-    background-image: url('beans.jpg');
-    background-size: cover !important;
-  }
-
-  .twotwo {
-    background-image: url('bean_recipe.jpg');
-    background-size: cover !important;
-  }
-
-  .threethree {
-    background-image: url('bean_japan.jpg');
-    background-size: cover !important;
-  }
-
-  .slide {
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: opacity 1s ease-in-out;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0;
-    &.showw {
-        opacity: 1;
-    }
-  }
-}
 
 .testing {
   height: 200px;
@@ -97,6 +58,20 @@ body {
     margin: 20px 0px 10px 30px;
   }
 }
+
+@media(min-width: 800px) {
+  .home-background {
+    height: 310px;
+    width: 350px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background-image: image-url("fwegfweg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 
 @media(max-width: 922px) {
   .slides-to-hide {
