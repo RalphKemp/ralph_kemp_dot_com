@@ -26,6 +26,13 @@
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
+  <% if @project.link %>
+    <div class="album-desc-container">
+      <div class="mobile-project-description m-card">
+       <p><%= link_to @project.link, "http://#{@project.link}" %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <!--   desktop -->
@@ -54,8 +61,16 @@
         <%= @project.description %>
       </div>
     </div>
+    <% if @project.link %>
+      <div class="project-link-container">
+        <div class="show-project-description b-card">
+           <%= link_to @project.link, "http://#{@project.link}" %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
+
 
 <div>
   <% if user_signed_in? %>
