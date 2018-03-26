@@ -26,7 +26,7 @@
      <p><%= @project.description.gsub(/\n/, '<br />') %></p>
     </div>
   </div>
-  <% if @project.link %>
+  <% if @project.link? %>
     <div class="album-desc-container">
       <div class="mobile-project-description m-card">
        <p><%= link_to @project.link, "http://#{@project.link}" %></p>
@@ -61,12 +61,12 @@
         <%= @project.description %>
       </div>
     </div>
-    <% if @project.link %>
-      <div class="project-link-container">
-        <div class="show-project-description b-card">
-           <%= link_to @project.link, "http://#{@project.link}" %>
+    <% if @project.link? %>
+        <div class="project-link-container">
+          <div class="show-project-description b-card">
+             <%= link_to @project.link, "http://#{@project.link}" %>
+          </div>
         </div>
-      </div>
     <% end %>
   </div>
 </div>
