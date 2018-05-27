@@ -1,15 +1,12 @@
 html {
   height: 100%;
 }
+
 body {
   position: relative;
-  background: linear-gradient(#f5efef, #f7ad7b);
-  // background-image: image-url("beans2.jpg"), linear-gradient(#f5efef, #f7ad7b);
-  background-size: cover;
   height: 100%;
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(#f5efef, #806d77);
 }
 
 .two-cards {
@@ -17,6 +14,10 @@ body {
   align-items: center;
   flex-direction: column;
   height: calc(100% - 70px);
+  transition: all 0.3s ease;
+  & p {
+    margin: 0px !important;
+  }
 }
 
 .logo-container {
@@ -42,12 +43,26 @@ body {
   border-radius: 10px;
 }
 
-
 .testing {
   height: 200px;
   width: 200px;
 }
 
+@media(min-width: 400px) {
+  .home-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    margin: 0;
+    background-image: image-url("bean_japan.jpg"), linear-gradient(#f5efef, #806d77);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
 
 @media(min-width: 600px) {
   .two-cards {
@@ -56,26 +71,6 @@ body {
 
   .a-card {
     margin: 20px 0px 10px 30px;
-  }
-}
-
-@media(min-width: 800px) {
-  .home-background {
-    height: 310px;
-    width: 350px;
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    background-image: image-url("fwegfweg.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-
-@media(max-width: 922px) {
-  .slides-to-hide {
-    display: none;
   }
 }
 
