@@ -9,6 +9,10 @@ body {
   background: linear-gradient(#f5efef, #806d77);
 }
 
+* p {
+  margin-bottom: 0px !important;
+}
+
 .two-cards {
   display: flex;
   align-items: center;
@@ -57,7 +61,7 @@ body {
     left: 0;
     height: 100%;
     margin: 0;
-    background-image: image-url("bean_japan.jpg"), linear-gradient(#f5efef, #806d77);
+    background-image: image-url("bean_japan.jpg"), linear-gradient(#f5efef, #b0b7d3);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
