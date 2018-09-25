@@ -1,5 +1,7 @@
 {
   "name": "ralph_kemp_dot_com",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^2.0.2"
+  }
 }

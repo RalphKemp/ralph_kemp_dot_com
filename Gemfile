@@ -16,7 +16,6 @@ gem 'cloudinary'
 gem 'jquery-rails'
 
 
-
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'

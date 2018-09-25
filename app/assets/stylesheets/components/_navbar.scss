@@ -6,7 +6,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .ralph-kemp-logo:hover {
@@ -63,11 +63,17 @@
   margin-bottom: 10px;
   margin-right: 10px;
   color: #a3a3a3;
+  font-size: 27px;
+  margin-top: 15px;
+  font-family: 'Work Sans', sans-serif;
+  color: #515151;
 }
 
-@media(max-width: 991px) {
+@media(min-width: 599px) {
   .navbar-wagon {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
+
+
 
